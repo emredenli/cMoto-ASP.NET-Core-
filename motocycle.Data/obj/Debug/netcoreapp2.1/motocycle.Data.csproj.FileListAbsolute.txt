@@ -1,0 +1,10 @@
+D:\Project\cMoto\motocycle.Data\bin\Debug\netcoreapp2.1\motocycle.Data.deps.json
+D:\Project\cMoto\motocycle.Data\bin\Debug\netcoreapp2.1\motocycle.Data.dll
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.csproj.CoreCompileInputs.cache
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.AssemblyInfoInputs.cache
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.AssemblyInfo.cs
+D:\Project\cMoto\motocycle.Data\bin\Debug\netcoreapp2.1\motocycle.Data.pdb
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.dll
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.pdb
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.csproj.AssemblyReference.cache
+D:\Project\cMoto\motocycle.Data\obj\Debug\netcoreapp2.1\motocycle.Data.GeneratedMSBuildEditorConfig.editorconfig

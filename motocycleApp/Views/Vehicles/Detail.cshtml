@@ -1,0 +1,201 @@
+﻿@model motocycleApp.Models.VehicleDetailPageModel;
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+
+            <img src="~/images/@Model.Image.ImageName" style="width:1140px;height: 650px;" alt="" class="img-responsive" />
+            
+            <div class="carousel-caption" role="option">
+                <p>
+                    <font face="impact" size="7" color="Red"><em>@Model.Vehicle.Name</em></font>
+                    @*<b>@Model.Vehicle.Name</b>*@
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+
+    <br>
+    <font color="Red" size="6">Vehicle</font>
+    <p>
+        @if (Model.Vehicle.VehicleId > decimal.Zero)
+        {
+            <table style="width:100%">
+                <tr>
+                    <th><h4><b>Name</b></h4></th>
+                    <th><h4><b>Year</b></h4></th>
+                    
+                </tr>
+                <tr>
+                    <td><h5>@Model.Vehicle.Name</h5></td>
+                    <td><h5>@Model.Vehicle.Year</h5></td>
+                    
+                </tr>
+
+            </table>
+        }
+    </p>
+
+    <br>
+    <font color="Red" size="6">Dimension</font>
+    <p>
+        @if (Model.Dimension.Id > decimal.Zero)
+        {
+        <table style="width:100%">
+            <tr>
+                <th><h4><b>Length (mm)</b></h4></th>
+                <th><h4><b>Width (mm)</b></h4></th>
+
+
+            </tr>
+            <tr>
+                <td><h5>@Model.Dimension.Length</h5></td>
+                <td><h5>@Model.Dimension.Width</h5></td>
+
+
+            </tr>
+
+            <tr>
+
+                <th><h4><b>Height (mm)</b></h4></th>
+                <th><h4><b>Distance Between Wheels (mm)</b></h4></th>
+
+            </tr>
+            <tr>
+
+                <td><h5>@Model.Dimension.Height</h5></td>
+                <td><h5>@Model.Dimension.DistanceBetweenWheels</h5></td>
+
+            </tr>
+
+            <tr>
+                <th><h4><b>Seat Height (mm)</b></h4></th>
+                <th><h4><b>Fuel Capacity (lt)</b></h4></th>
+                
+            </tr>
+            <tr>
+                <td><h5>@Model.Dimension.SeatHeight</h5></td>
+                <td><h5>@Model.Dimension.FuelCapacity</h5></td>
+                
+            </tr>
+
+            <tr>
+                
+                <th><h4><b>Weight(kg)</b></h4></th>
+            </tr>
+            <tr>
+                
+                <td><h5>@Model.Dimension.Weight</h5></td>
+            </tr>
+        </table>
+        }
+    </p>
+
+    <br>
+    <font color="Red" size="6">Engine</font>
+    <p>
+        @if (Model.Engine.Id > decimal.Zero)
+        {
+        <table style="width:100%">
+            <tr>
+                <th><h4><b>Engine Type</b></h4></th>
+                <th><h4><b>Engine Capacity (cc)</b></h4></th>
+
+
+            </tr>
+            <tr>
+                <td><h5>@Model.Engine.EngineType</h5></td>
+                <td><h5>@Model.Engine.EngineCapacity</h5></td>
+
+            </tr>
+
+            <tr>
+
+                <th><h4><b>Cylinder Diameter</b></h4></th>
+                <th><h4><b>Strok</b></h4></th>
+
+            </tr>
+            <tr>
+
+                <td><h5>@Model.Engine.CylinderDiameter</h5></td>
+                <td><h5>@Model.Engine.Strok</h5></td>
+            </tr>
+
+            <tr>
+                <th><h4><b>Compression Rate</b></h4></th>
+                <th><h4><b>Fuel System</b></h4></th>
+
+
+            </tr>
+            <tr>
+                <td><h5>@Model.Engine.CompressionRate</h5></td>
+                <td><h5>@Model.Engine.FuelSystem</h5></td>
+
+
+
+            </tr>
+
+            <tr>
+
+                <th><h4><b>MaximumPower</b></h4></th>
+                <th><h4><b>Maximum Torque</b></h4></th>
+
+            </tr>
+            <tr>
+
+                <td><h5>@Model.Engine.MaximumPower</h5></td>
+                <td><h5>@Model.Engine.maximumTorque</h5></td>
+
+
+            </tr>
+
+            <tr>
+                <th><h4><b>Ignition</b></h4></th>
+                <th><h4><b>Transmission</b></h4></th>
+                
+            </tr>
+            <tr>
+                <td><h5>@Model.Engine.Ignition</h5></td>
+                <td><h5>@Model.Engine.Transmission</h5></td>
+                
+            </tr>
+
+            <tr>
+                
+                <th><h4><b>Power Transmission</b></h4></th>
+            </tr>
+            <tr>
+                
+                <td><h5>@Model.Engine.PowerTransmission</h5></td>
+            </tr>
+        </table>
+            
+        }
+    </p>
+</div>

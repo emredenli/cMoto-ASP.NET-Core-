@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a8bb2a6e-8003-48ca-be7c-5910afdfe076": {
+      "ProjectGuid": "a8bb2a6e-8003-48ca-be7c-5910afdfe076",
+      "DisplayName": "motocycleApp",
+      "ColorIndex": 0
+    },
+    "a34b633a-9de5-4e34-a2b8-5994a38c5222": {
+      "ProjectGuid": "a34b633a-9de5-4e34-a2b8-5994a38c5222",
+      "DisplayName": "motocycle.Data",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,88 @@
+﻿@model motocycle.Data.Model.Engine
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Engine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VehicleId" class="control-label"></label>
+                <input asp-for="VehicleId" class="form-control" />
+                <span asp-validation-for="VehicleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EngineType" class="control-label"></label>
+                <input asp-for="EngineType" class="form-control" />
+                <span asp-validation-for="EngineType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EngineCapacity" class="control-label"></label>
+                <input asp-for="EngineCapacity" class="form-control" />
+                <span asp-validation-for="EngineCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CylinderDiameter" class="control-label"></label>
+                <input asp-for="CylinderDiameter" class="form-control" />
+                <span asp-validation-for="CylinderDiameter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Strok" class="control-label"></label>
+                <input asp-for="Strok" class="form-control" />
+                <span asp-validation-for="Strok" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompressionRate" class="control-label"></label>
+                <input asp-for="CompressionRate" class="form-control" />
+                <span asp-validation-for="CompressionRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FuelSystem" class="control-label"></label>
+                <input asp-for="FuelSystem" class="form-control" />
+                <span asp-validation-for="FuelSystem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaximumPower" class="control-label"></label>
+                <input asp-for="MaximumPower" class="form-control" />
+                <span asp-validation-for="MaximumPower" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="maximumTorque" class="control-label"></label>
+                <input asp-for="maximumTorque" class="form-control" />
+                <span asp-validation-for="maximumTorque" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ignition" class="control-label"></label>
+                <input asp-for="Ignition" class="form-control" />
+                <span asp-validation-for="Ignition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Transmission" class="control-label"></label>
+                <input asp-for="Transmission" class="form-control" />
+                <span asp-validation-for="Transmission" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PowerTransmission" class="control-label"></label>
+                <input asp-for="PowerTransmission" class="form-control" />
+                <span asp-validation-for="PowerTransmission" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

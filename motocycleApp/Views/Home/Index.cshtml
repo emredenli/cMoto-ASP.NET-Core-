@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/yamahar1.jpg" style="width:1140px;height: 650px;" alt="yamaha1" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                
+                    <font face="impact" size="6" color="White"><em>Yamaha's most preferred model...</em></font>
+                    <p>
+                        <a class="btn btn-default" href="https://www.sahibinden.com/en/motorcycles-yamaha-yzf-r1?a269_min=2020">
+                            <b>Buy</b>
+                        </a>
+                    </p>
+                
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/hondacbr1000rr.jpg" style="width:1140px;height: 650px;" alt="honda1" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                
+                    <font face="impact" size="6" color="White"><em>Honda's most preferred model...</em></font>
+                    <p>
+                        <a class="btn btn-default" href="https://www.sahibinden.com/en/motorcycles-honda-cbr1000rr-r-fireblade-sp?a269_min=2020">
+                            <b>Buy</b>
+                        </a>
+                    </p>
+                
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/images/kawasakih2r.jpg" style="width:1140px;height: 650px;" alt="kawasaki1" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                
+                    <font face="impact" size="6" color="White"><em>Kawasaki's most preferred model...</em></font>
+                    <p>
+                        <a class="btn btn-default" href="https://www.sahibinden.com/en/motorcycles-kawasaki-ninja-h2?a269_min=2020">
+                            <b>Buy</b>
+                        </a>
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>The News</h2>
+        @if (Model.Notifications.Count == decimal.Zero)
+        {
+            <div class="alert alert-warning fade in alert-dismissible show">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                </button>    <strong>Uyarı!</strong> Hiç haber bulunmuyor.
+            </div>
+        }
+        else
+        {
+            <ul>
+                @foreach (var item in Model.Notifications)
+                {
+                    <li> <h4><b>@item.Title :</b> </h4><p> @item.Description</p></li>
+                }
+            </ul>
+        }
+    </div>
+</div>

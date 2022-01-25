@@ -1,0 +1,101 @@
+﻿@model IEnumerable<motocycle.Data.Model.Engine>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <h2>Engine Block Page</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EngineCapacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CylinderDiameter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Strok)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompressionRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FuelSystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaximumPower)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.maximumTorque)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ignition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PowerTransmission)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EngineCapacity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CylinderDiameter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Strok)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompressionRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FuelSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaximumPower)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.maximumTorque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ignition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transmission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PowerTransmission)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
